@@ -42,7 +42,7 @@ const Testimonials = () => {
   }, []);
 
   useEffect(() => {
-    const timer = setInterval(() => paginate(1), 5000);
+    const timer = setInterval(() => paginate(1), 6000);
     return () => clearInterval(timer);
   }, [paginate]);
 
@@ -95,22 +95,22 @@ const Testimonials = () => {
           </div>
 
           {/* Navigation */}
-          <div className="mt-8 flex items-center justify-center gap-4">
+          <div className="mt-8 flex items-center justify-center gap-5">
             <button
               onClick={() => paginate(-1)}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-foreground/60 shadow-sm transition-all hover:bg-primary hover:text-primary-foreground hover:border-primary"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground/60 shadow-md transition-all hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-lg active:scale-95"
               aria-label="Anterior"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
             
-            <div className="flex gap-2">
+          <div className="flex gap-2">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrent([i, i > current ? 1 : -1])}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
-                    i === current ? "w-8 bg-primary" : "w-2.5 bg-border hover:bg-muted-foreground/30"
+                  className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    i === current ? "w-8 bg-primary" : "w-2.5 bg-border hover:bg-primary/40"
                   }`}
                   aria-label={`Depoimento ${i + 1}`}
                 />
@@ -119,7 +119,7 @@ const Testimonials = () => {
 
             <button
               onClick={() => paginate(1)}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-foreground/60 shadow-sm transition-all hover:bg-primary hover:text-primary-foreground hover:border-primary"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground/60 shadow-md transition-all hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-lg active:scale-95"
               aria-label="Próximo"
             >
               <ChevronRight className="h-5 w-5" />

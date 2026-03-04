@@ -1,4 +1,4 @@
-import { Star, MessageCircle, ChevronDown, Phone } from "lucide-react";
+import { Star, MessageCircle, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-clinic.jpg";
 import { WHATSAPP_URL } from "./FloatingWhatsApp";
@@ -60,13 +60,14 @@ const Hero = () => {
                 <MessageCircle className="h-5 w-5" />
                 Agendar no WhatsApp
               </motion.a>
-              <a
-                href="tel:01125525522"
+              <motion.a
+                href="#tratamentos"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/20 px-8 py-4 font-sans font-medium text-primary-foreground backdrop-blur-sm transition-colors hover:bg-primary-foreground/10"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <Phone className="h-4 w-4" />
-                (011) 2552-5522
-              </a>
+                Ver Tratamentos
+              </motion.a>
             </div>
           </motion.div>
         </div>
