@@ -68,7 +68,8 @@ const Testimonials = () => {
 
         {/* Carousel */}
         <div className="relative mx-auto mt-14 max-w-2xl">
-          <div className="min-h-[280px] md:min-h-[240px] flex items-center justify-center">
+          {/* Card area */}
+          <div className="relative min-h-[280px] md:min-h-[240px]">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={current}
@@ -78,7 +79,7 @@ const Testimonials = () => {
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.45, ease: "easeInOut" }}
-                className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border border-border bg-card p-8 shadow-lg md:p-12"
+                className="flex flex-col items-center justify-center rounded-2xl border border-border bg-card p-8 shadow-lg md:p-12"
               >
                 <Quote className="h-8 w-8 text-gold/30 mb-4" />
                 <div className="flex gap-1 mb-5">
@@ -94,8 +95,8 @@ const Testimonials = () => {
             </AnimatePresence>
           </div>
 
-          {/* Navigation */}
-          <div className="mt-8 flex items-center justify-center gap-5">
+          {/* Navigation - always visible */}
+          <div className="relative z-10 mt-8 flex items-center justify-center gap-5">
             <button
               onClick={() => paginate(-1)}
               className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground/60 shadow-md transition-all hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-lg active:scale-95"
@@ -104,7 +105,7 @@ const Testimonials = () => {
               <ChevronLeft className="h-5 w-5" />
             </button>
             
-          <div className="flex gap-2">
+            <div className="flex gap-2">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
