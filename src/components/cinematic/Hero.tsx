@@ -56,10 +56,10 @@ export const Hero = () => {
                 {/* Máscara radial focada apenas na região de leitura para dar respiro */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(26,26,26,0.8)_0%,rgba(26,26,26,0)_80%)] pointer-events-none" />
 
-                {/* Efeito Fade out longo conectando a imagem escura ao fundo natural da próxima seção */}
+                {/* Efeito Fade out conectando a imagem escura ao fundo natural da próxima seção */}
                 <div
-                    className="absolute bottom-[-2px] left-0 w-full h-64 pointer-events-none z-10"
-                    style={{ background: 'linear-gradient(to top, hsl(var(--background)) 10%, rgba(255,255,255,0.4) 60%, transparent 100%)' }}
+                    className="absolute bottom-[-2px] left-0 w-full h-32 pointer-events-none z-10"
+                    style={{ background: 'linear-gradient(to top, hsl(var(--background)) 5%, transparent 100%)' }}
                 />
             </div>
 
