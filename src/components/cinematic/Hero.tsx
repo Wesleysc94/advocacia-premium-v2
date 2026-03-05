@@ -10,7 +10,7 @@ export const Hero = () => {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // Split text fade-up staggered animation
+            // Fade out split text initially
             gsap.fromTo(
                 '.hero-stagger',
                 {
@@ -27,18 +27,6 @@ export const Hero = () => {
                 }
             );
 
-            // Parallax and fade out background image on scroll
-            gsap.to(bgRef.current, {
-                y: '30%',
-                opacity: 0.3, // Faz a imagem sumir e escurecer muito no scroll
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: 'top top',
-                    end: 'bottom top',
-                    scrub: true,
-                }
-            });
         }, containerRef);
 
         return () => ctx.revert();
@@ -56,7 +44,7 @@ export const Hero = () => {
                     ref={bgRef}
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none scale-110"
                     style={{
-                        backgroundImage: "url('/hero_premium_16x9.png')",
+                        backgroundImage: "url('/hero-bg.png')",
                         animation: 'breathe 20s infinite alternate ease-in-out'
                     }}
                 />
@@ -68,7 +56,10 @@ export const Hero = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(26,26,26,0.8)_0%,rgba(26,26,26,0)_80%)] pointer-events-none" />
 
                 {/* Efeito Fade out conectando a imagem escura ao fundo natural da próxima seção */}
-                <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-dark to-transparent pointer-events-none" />
+                <div
+                    className="absolute bottom-[-2px] left-0 w-full h-48 pointer-events-none z-10"
+                    style={{ background: 'linear-gradient(to top, hsl(var(--background)), transparent)' }}
+                />
             </div>
 
             {/* Content wrapper - Centered */}
@@ -134,7 +125,7 @@ export const Hero = () => {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="hero-stagger absolute bottom-10 left-0 w-full z-10 flex justify-center pointer-events-none">
+            <div className="hero-stagger mt-8 mb-8 md:absolute md:bottom-10 md:mb-0 left-0 w-full z-10 flex justify-center pointer-events-none">
                 <div
                     className="flex flex-col items-center gap-2 pointer-events-auto cursor-pointer group bg-dark/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/10 hover:bg-dark/60 transition-all hover:scale-105 shadow-[0_0_20px_rgba(0,0,0,0.3)] animate-pulse"
                     onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })}

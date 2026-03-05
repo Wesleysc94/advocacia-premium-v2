@@ -10,7 +10,6 @@ import Faq from '@/components/cinematic/Faq';
 import About from '@/components/cinematic/About';
 import Contact from '@/components/cinematic/Contact';
 import Footer from '@/components/cinematic/Footer';
-import FloatingWhatsApp from '@/components/cinematic/FloatingWhatsApp';
 
 const IndexCinematic = () => {
     return (
@@ -32,7 +31,6 @@ const IndexCinematic = () => {
                 <Contact />
             </main>
             <Footer />
-            <FloatingWhatsApp />
         </div>
     );
 };

@@ -7,21 +7,20 @@ import { AnimatePresence, motion } from "framer-motion";
 import IndexCinematic from "./pages/IndexCinematic";
 import NotFound from "./pages/NotFound";
 import TreatmentDetails from "./pages/TreatmentDetails";
+import FloatingWhatsApp from "./components/cinematic/FloatingWhatsApp";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient();
 
 const PageTransition = ({ children }: { children: React.ReactNode }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, filter: "blur(8px)" }}
-      animate={{ opacity: 1, filter: "blur(0px)" }}
-      exit={{ opacity: 0, filter: "blur(8px)" }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="w-full min-h-screen"
-    >
+    <div className="w-full min-h-screen">
       {children}
-    </motion.div>
+    </div>
   );
 };
 
@@ -55,6 +54,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <AnimatedRoutes />
+        <FloatingWhatsApp />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
