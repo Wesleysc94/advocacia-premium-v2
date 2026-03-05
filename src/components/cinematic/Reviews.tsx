@@ -76,8 +76,8 @@ export const Reviews = () => {
     const prevSlide = () => handleTransition('prev');
 
     return (
-        <section id="avaliacoes" ref={containerRef} className="py-20 px-4 w-full max-w-7xl mx-auto md:px-12 lg:px-16">
-            <div className="bg-dark rounded-[3rem] w-full relative overflow-hidden px-4 md:px-12 py-16 md:py-20 shadow-2xl">
+        <section id="avaliacoes" ref={containerRef} className="py-12 px-4 w-full max-w-7xl mx-auto md:px-12 lg:px-16">
+            <div className="bg-dark rounded-[3rem] w-full relative overflow-hidden px-4 md:px-12 py-10 md:py-12 shadow-2xl">
                 {/* Background Texture/Gradient */}
                 <div className="absolute top-0 right-0 w-full h-full bg-gradient-radial from-accent/5 to-transparent opacity-50 pointer-events-none" />
 

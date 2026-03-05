@@ -4,7 +4,7 @@ import depoisImg from '../../assets/depois.png';
 
 const BeforeAfterGallery = () => {
     return (
-        <section id="galeria" className="py-20 px-4 md:px-16 w-full max-w-6xl mx-auto overflow-hidden">
+        <section id="galeria" className="py-12 px-4 md:px-16 w-full max-w-6xl mx-auto overflow-hidden">
             {/* Header */}
             <div className="mb-12 flex flex-col items-center mx-auto text-center">
                 <div className="flex items-center gap-4 mb-4">

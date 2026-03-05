@@ -43,7 +43,7 @@ export const About = () => {
     }, []);
 
     return (
-        <section id="sobre" ref={containerRef} className="py-16 lg:py-24 px-8 md:px-16 w-full max-w-7xl mx-auto overflow-hidden">
+        <section id="sobre" ref={containerRef} className="py-10 lg:py-16 px-8 md:px-16 w-full max-w-7xl mx-auto overflow-hidden">
             <div className="flex flex-col lg:flex-row gap-16 items-center">
 
                 {/* Content Side */}

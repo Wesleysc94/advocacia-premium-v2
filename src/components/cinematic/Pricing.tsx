@@ -70,7 +70,7 @@ export const Pricing = () => {
     }, []);
 
     return (
-        <section ref={containerRef} className="py-32 px-8 md:px-16 w-full max-w-7xl mx-auto">
+        <section ref={containerRef} className="py-20 px-8 md:px-16 w-full max-w-7xl mx-auto">
             <div className="text-center mb-16">
                 <h2 className="font-serif-drama text-5xl md:text-6xl text-primary mb-4">Planos de Tratamento.</h2>
                 <p className="font-sans-outfit text-primary/70 max-w-2xl mx-auto text-lg">

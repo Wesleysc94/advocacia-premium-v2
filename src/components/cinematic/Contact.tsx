@@ -28,7 +28,7 @@ export const Contact = () => {
     }, []);
 
     return (
-        <section id="contato" ref={containerRef} className="py-16 lg:py-24 px-8 md:px-16 w-full max-w-7xl mx-auto">
+        <section id="contato" ref={containerRef} className="py-10 lg:py-16 px-8 md:px-16 w-full max-w-7xl mx-auto">
 
             <div className="bg-primary text-cream rounded-[3rem] p-10 md:p-16 lg:p-20 relative overflow-hidden shadow-2xl">
                 {/* Background Texture/Pattern */}

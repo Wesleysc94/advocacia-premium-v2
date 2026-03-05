@@ -55,7 +55,7 @@ export const Philosophy = () => {
     return (
         <section
             ref={containerRef}
-            className="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden bg-dark px-8 py-32"
+            className="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden bg-dark px-8 py-20"
         >
             {/* Background Image with Overlay and Solid Fallback */}
             <div

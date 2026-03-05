@@ -126,7 +126,7 @@ const TreatmentDetails = () => {
             </section>
 
             {/* Detalhes Clínicos */}
-            <section className="py-24 px-8 md:px-16 w-full max-w-5xl mx-auto">
+            <section className="py-16 px-8 md:px-16 w-full max-w-5xl mx-auto">
                 <div className="mb-12 anim-up flex w-full">
                     <button
                         onClick={() => navigate('/#tratamentos')}

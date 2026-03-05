@@ -47,10 +47,10 @@ export const Hero = () => {
     return (
         <section
             ref={containerRef}
-            className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center text-center px-4 md:px-16 overflow-hidden pt-28 pb-20 md:py-0"
+            className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center text-center px-4 md:px-16 overflow-hidden pt-32 pb-16 md:py-0"
         >
             {/* Background Image with Parallax & Soft Vignette Concept */}
-            <div className="absolute inset-0 z-0 bg-primary/20 overflow-hidden">
+            <div className="absolute inset-0 z-0 bg-dark overflow-hidden">
                 {/* Imagem Premium com Efeito Breathe Constante (CSS + GSAP) */}
                 <div
                     ref={bgRef}
@@ -61,31 +61,31 @@ export const Hero = () => {
                     }}
                 />
 
-                {/* Overlay base clínico suave (Navy Gradient) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-dark/30 to-background/10 mix-blend-multiply" />
+                {/* Overlay Escuro para o Mobile (esconde a logo da imagem atrás do texto) */}
+                <div className="absolute inset-0 bg-dark/70 md:bg-dark/40" />
 
-                {/* Máscara radial super suave focada apenas na região de leitura (centro) para dar contraste sem parecer uma caixa dura */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(26,26,26,0.7)_0%,rgba(26,26,26,0)_60%)] pointer-events-none" />
+                {/* Máscara radial focada apenas na região de leitura para dar respiro */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(26,26,26,0.8)_0%,rgba(26,26,26,0)_80%)] pointer-events-none" />
 
-                {/* Efeito Fade out (esfumaçado) impecável na base da Hero, conectando a imagem escura ao fundo creme natural da próxima seção */}
-                <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+                {/* Efeito Fade out conectando a imagem escura ao fundo natural da próxima seção */}
+                <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-dark to-transparent pointer-events-none" />
             </div>
 
             {/* Content wrapper - Centered */}
-            <div className="relative z-10 w-full max-w-4xl text-cream flex flex-col items-center gap-6 mt-10 md:mt-16 mb-8 md:mb-0 text-center">
+            <div className="relative z-10 w-full max-w-4xl text-cream flex flex-col items-center gap-4 mt-8 md:mt-16 mb-4 md:mb-0 text-center">
 
                 {/* Typographic Pattern */}
                 <div className="flex flex-col items-center relative z-20">
-                    <h1 className="flex flex-col gap-2 drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)] text-center">
-                        <span className="hero-stagger font-sans-bold text-sm md:text-base lg:text-lg text-accent uppercase tracking-[0.3em] font-semibold">
+                    <h1 className="flex flex-col gap-1 md:gap-2 drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)] text-center">
+                        <span className="hero-stagger font-sans-bold text-xs sm:text-sm md:text-base lg:text-lg text-accent uppercase tracking-[0.3em] font-semibold mb-2">
                             Odontologia Estética Avançada
                         </span>
-                        <span className="hero-stagger font-serif-drama text-5xl md:text-7xl lg:text-8xl text-cream leading-[0.9] mt-2">
-                            Transforme seu sorriso com <span className="text-accent italic font-light">segurança.</span>
+                        <span className="hero-stagger font-serif-drama text-[2.75rem] leading-[1] md:text-7xl lg:text-8xl text-cream md:leading-[0.9] mt-2">
+                            Transforme seu sorriso<br className="md:hidden" /> com <span className="text-accent italic font-light">segurança.</span>
                         </span>
                     </h1>
 
-                    <p className="hero-stagger font-sans-outfit text-lg md:text-xl text-cream/90 max-w-2xl font-light mt-8 leading-relaxed drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]">
+                    <p className="hero-stagger font-sans-outfit text-base md:text-xl text-cream/90 max-w-2xl font-light mt-6 md:mt-8 leading-relaxed drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)] px-2">
                         Tratamentos modernos, atendimento humanizado e resultados incrivelmente naturais para pacientes exigentes que priorizam conforto e saúde.
                     </p>
                 </div>

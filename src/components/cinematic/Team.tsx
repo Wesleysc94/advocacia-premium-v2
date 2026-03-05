@@ -28,7 +28,7 @@ export const Team = () => {
     }, []);
 
     return (
-        <section id="equipe" ref={containerRef} className="py-20 md:py-24 px-8 md:px-16 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <section id="equipe" ref={containerRef} className="py-12 md:py-16 px-8 md:px-16 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
             {/* Content Side (Left / Top in mobile) */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center">
