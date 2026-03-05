@@ -4,6 +4,8 @@ import gsap from 'gsap';
 import Navbar from '../components/cinematic/Navbar';
 import Contact from '../components/cinematic/Contact';
 import Footer from '../components/cinematic/Footer';
+import Reviews from '../components/cinematic/Reviews';
+import Faq from '../components/cinematic/Faq';
 
 const TREATMENT_DATA = {
     'prevencao-integral': {
@@ -103,8 +105,9 @@ const TreatmentDetails = () => {
                         className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
                         style={{ backgroundImage: `url(${data.heroImage})` }}
                     />
-                    <div className="absolute inset-0 bg-dark/70 backdrop-blur-[2px]" />
-                    <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-dark/10 mix-blend-multiply" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(26,26,26,0.6)_0%,rgba(26,26,26,0)_80%)] pointer-events-none" />
+                    <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-dark to-transparent" />
                 </div>
 
                 <div className="relative z-10 w-full max-w-4xl flex flex-col items-center">
@@ -129,7 +132,7 @@ const TreatmentDetails = () => {
                 <div className="mb-12 anim-up flex w-full">
                     <button
                         onClick={() => navigate('/#tratamentos')}
-                        className="flex items-center gap-2 text-primary/60 hover:text-accent font-sans-bold text-sm uppercase tracking-widest transition-colors group"
+                        className="flex items-center gap-2 text-cream/50 hover:text-accent font-sans-bold text-sm uppercase tracking-widest transition-colors group"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-left group-hover:-translate-x-1 transition-transform"><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg>
                     </button>
@@ -141,13 +144,13 @@ const TreatmentDetails = () => {
                             <span className="w-6 h-[1px] bg-accent" />
                             <span className="font-mono-data text-xs text-accent uppercase tracking-widest font-semibold">Diagnóstico & Estratégia</span>
                         </div>
-                        <h2 className="anim-up font-serif-drama text-4xl lg:text-5xl text-primary leading-tight">A Visão<br />Clínica</h2>
-                        <p className="anim-up font-sans-outfit text-primary/80 text-lg leading-relaxed mt-4">
+                        <h2 className="anim-up font-serif-drama text-4xl lg:text-5xl text-cream leading-tight">A Visão<br />Clínica</h2>
+                        <p className="anim-up font-sans-outfit text-cream/70 text-lg leading-relaxed mt-4">
                             {data.description}
                         </p>
 
                         <div className="mt-8 border-l-2 border-accent/30 pl-6 anim-up py-2">
-                            <p className="font-serif-drama text-2xl text-primary/90 italic">"Padrão ouro em tecnologia e acolhimento."</p>
+                            <p className="font-serif-drama text-2xl text-cream/90 italic">"Padrão ouro em tecnologia e acolhimento."</p>
                         </div>
                     </div>
 
@@ -156,14 +159,14 @@ const TreatmentDetails = () => {
                             <span className="w-6 h-[1px] bg-accent" />
                             <span className="font-mono-data text-xs text-accent uppercase tracking-widest font-semibold">Vantagens Diretas</span>
                         </div>
-                        <h2 className="anim-up font-serif-drama text-4xl lg:text-5xl text-primary leading-tight">Principais<br />Benefícios</h2>
+                        <h2 className="anim-up font-serif-drama text-4xl lg:text-5xl text-cream leading-tight">Principais<br />Benefícios</h2>
                         <ul className="flex flex-col gap-4 mt-4">
                             {data.benefits.map((benefit, idx) => (
-                                <li key={idx} className="anim-up flex items-start gap-4 p-5 rounded-2xl bg-white border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
-                                    <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5">
+                                <li key={idx} className="anim-up flex items-start gap-4 p-5 rounded-2xl bg-cream/5 border border-cream/10 shadow-lg hover:bg-cream/10 transition-colors">
+                                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5" /></svg>
                                     </div>
-                                    <span className="font-sans-outfit text-primary/80 leading-relaxed text-[15px] pt-1">{benefit}</span>
+                                    <span className="font-sans-outfit text-cream/80 leading-relaxed text-[15px] pt-1">{benefit}</span>
                                 </li>
                             ))}
                         </ul>
@@ -184,22 +187,21 @@ const TreatmentDetails = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-                        {/* Linha conectora desktop */}
-                        <div className="hidden md:block absolute top-[44px] left-[10%] w-[80%] h-[2px] bg-primary/5 z-0" />
+                        <div className="hidden md:block absolute top-[44px] left-[10%] w-[80%] h-[2px] bg-cream/10 z-0" />
 
                         {data.steps.map((stepData, idx) => (
                             <div key={idx} className="anim-up relative z-10 flex flex-col items-center text-center group">
-                                <div className="w-24 h-24 rounded-full bg-white border-8 border-cream flex items-center justify-center shadow-lg shadow-primary/5 mb-8 group-hover:border-accent/20 transition-colors duration-500">
-                                    <span className="font-serif-drama text-3xl text-primary">{stepData.step}</span>
+                                <div className="w-24 h-24 rounded-full bg-dark border-8 border-cream/5 flex items-center justify-center shadow-lg shadow-black/50 mb-8 group-hover:border-accent/40 transition-colors duration-500">
+                                    <span className="font-serif-drama text-3xl text-cream">{stepData.step}</span>
                                 </div>
-                                <h3 className="font-sans-bold text-xl text-primary mb-3">{stepData.title}</h3>
-                                <p className="font-sans-outfit text-primary/70 text-sm leading-relaxed px-4">{stepData.desc}</p>
+                                <h3 className="font-sans-bold text-xl text-cream mb-3">{stepData.title}</h3>
+                                <p className="font-sans-outfit text-cream/60 text-sm leading-relaxed px-4">{stepData.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <div className="mt-20 flex justify-center w-full anim-up">
+                <div className="mt-20 flex justify-center w-full anim-up pb-10">
                     <button
                         onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
                         className="bg-accent text-white px-10 py-5 rounded-full font-sans-bold uppercase tracking-widest shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:scale-105 transition-transform"
@@ -208,6 +210,11 @@ const TreatmentDetails = () => {
                     </button>
                 </div>
             </section>
+
+            <Reviews />
+            <div className="pt-20">
+                <Faq />
+            </div>
 
             <Contact />
             <Footer />
