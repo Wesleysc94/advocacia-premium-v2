@@ -103,7 +103,7 @@ export const Reviews = () => {
                 </div>
 
                 {/* Carousel Container */}
-                <div className="relative w-full overflow-hidden flex-grow min-h-[300px] flex items-center">
+                <div className="relative w-full overflow-hidden flex-grow min-h-[300px] flex items-center py-4">
                     {REVIEWS.map((review, index) => {
                         const isActive = index === activeIndex;
 
@@ -138,7 +138,7 @@ export const Reviews = () => {
 
                                     {/* Author Info with Circular Avatar */}
                                     <div className="flex items-center gap-4 sm:gap-5 mt-auto pt-2">
-                                        <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-[2px] bg-gradient-to-br from-[#FBBF24]/60 to-[#FBBF24]/10 shadow-[0_0_20px_rgba(251,191,36,0.3)] shrink-0 m-1 relative z-20">
+                                        <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-[2px] bg-gradient-to-br from-[#FBBF24]/60 to-[#FBBF24]/10 shadow-[0_0_20px_rgba(251,191,36,0.3)] shrink-0 m-3 relative z-20">
                                             <div className="w-full h-full rounded-full bg-dark flex items-center justify-center border border-dark">
                                                 <span className="font-sans-bold text-cream text-lg sm:text-xl drop-shadow-sm tracking-widest">{review.initial}</span>
                                             </div>
