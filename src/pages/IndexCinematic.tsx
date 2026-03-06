@@ -19,12 +19,12 @@ const IndexCinematic = () => {
                 <div id="inicio">
                     <Hero />
                 </div>
-                <Reviews />
                 <Treatments />
                 <div id="especialidades">
                     <Features />
                 </div>
                 <BeforeAfterGallery />
+                <Reviews />
                 <Team />
                 <Faq />
                 <About />
