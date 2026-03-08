@@ -1,66 +1,72 @@
-# Aura Odonto Premium - Front-End Architecture
+# Advocacia Premium — v2 Charcoal Edition
 
-<div align="center">
-  <img src="public/mockups/versao_dark_mobil_e_desktop.PNG" alt="Aura Odonto Preview" width="600"/>
-  
-  <p><strong>Next-Generation Dental Clinic Interface & High-Conversion Booking Flow</strong></p>
-</div>
+> Premium law firm website template built with React, TypeScript, Vite, and TailwindCSS.
 
-## 💎 About the Project
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-06B6D4?logo=tailwindcss&logoColor=white)
 
-Aura Odonto Premium is a highly sophisticated, high-performance web application designed for a premium dental clinic based in São Paulo. Moving away from traditional, slow monolithic platforms (like WordPress), this application uses modern Front-End architecture to deliver an instantaneous, app-like experience. 
+## 🖤 Design System — Charcoal & Burgundy
 
-The primary goal of this system is **High-Ticket Patient Conversion**, leveraging neuromarketing principles, extreme performance, and fluid micro-interactions to build trust and authority in milliseconds.
+| Token | Dark Mode | Light Mode |
+|-------|-----------|------------|
+| Background | Charcoal `#121212` | Warm Ivory `#F5F0EA` |
+| Accent | Bronze `#C4956A` | Burgundy `#4A1C2B` |
+| Text | Ivory `#DED8D0` | Charcoal `#1A1A1A` |
+| Cards | Dark Gray `#1C1C1C` | Light Ivory `#FAF5F0` |
 
-## 🚀 Technology Stack
+## ⚡ Features
 
-*   **Core:** React 18, TypeScript, Vite (Lightning-fast HMR and optimized builds)
-*   **Styling Engine:** Tailwind CSS & Shadcn/UI (Consistent, scalable design system)
-*   **Cinematic Animations:** GSAP (GreenSock) & Framer Motion (Hardware-accelerated stagger effects, scroll triggers, parallax)
-*   **State Management & Data:** React Query (for complex data fetching, though mostly static for extreme speed)
-*   **Routing:** React Router DOM (with route-based AnimatePresence transitions)
-*   **Sliders:** Swiper JS (optimized for seamless, touch-friendly image carousels)
+- **11 pages** — Home, 5 Practice Areas, 3 Blog Articles, Privacy Policy, Terms
+- **Editorial layout** — Numbered sections (01–04), angular geometry, full-width navbar
+- **Dark/Light mode** — Automatic toggle with smooth transitions
+- **SEO optimized** — JSON-LD LegalService schema, robots.txt, sitemap.xml (11 URLs)
+- **LGPD compliant** — Privacy Policy & Terms of Use pages
+- **Premium form** — Phone field, loading spinner, success toast, area selector
+- **GSAP animations** — Scroll-triggered reveals, staggered card entries
+- **Responsive** — Tested on mobile, tablet, and desktop
 
-## ⚡ Engineering Highlights
+## 🏗️ Tech Stack
 
-*   **Component-Driven Architecture:** The UI is strictly broken down into highly reusable, scalable `.tsx` components (Hero, Testimonials, Benefits, etc.), following modern composition patterns.
-*   **Zero-Jank Animations:** The Hero section utilizes native CSS `breathe` animations alongside GSAP `ScrollTrigger` and Framer `motion` variants. Animations are hardware-accelerated, targeting only `transform` and `opacity` to maintain stable 60FPS.
-*   **Advanced CSS Masking & Gradients:** Implementation of complex `radial-gradient` masks and glassmorphism (backdrop-blur) effects tailored for performance, mimicking native iOS/macOS aesthetics without heavy image payloads.
-*   **Mobile-First Precision:** Layouts and touch targets are specifically engineered for maximum conversion on mobile devices, where 80%+ of clinic traffic originates.
+| Tool | Purpose |
+|------|---------|
+| React 18 | UI framework (SPA) |
+| TypeScript 5 | Type-safe development |
+| Vite 5 | Build tool + HMR |
+| TailwindCSS 3 | Utility-first styling |
+| GSAP + ScrollTrigger | Smooth scroll animations |
+| React Router 6 | Client-side routing |
+| Sonner | Toast notifications |
+| Vercel | Deployment (CDN, edge) |
 
-## 💻 Running Locally
+## 🚀 Quick Start
 
-To run the Aura Odonto application in a development environment:
+```bash
+# Install dependencies
+npm install
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/Wesleysc94/auraodontopremium.git
-    cd auraodontopremium
-    ```
+# Start dev server (http://localhost:8080)
+npm run dev
 
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
+# Build for production
+npm run build
+```
 
-3.  **Start the Vite development server:**
-    ```bash
-    npm run dev
-    ```
+## 📁 Project Structure
 
-4.  **Production build:**
-    ```bash
-    npm run build
-    ```
+```
+src/
+├── components/cinematic/   # UI components (Navbar, Hero, Features, etc.)
+├── pages/                  # Route pages (legal, blog, practice areas)
+├── index.css               # Design tokens (CSS custom properties)
+└── App.tsx                 # Router configuration
+```
 
-## 📬 Contact
+## 📄 License
 
-Engineered by Wesley Carvalho.
-Available for Lead Front-End and Full-Stack Engineering roles.
-
-*   **Workana:** [Wesley Carvalho](https://www.workana.com/freelancer/a6545ec7d8aa1d83db959227a5fa29b4)
+Custom-built template. All rights reserved.
 
 ---
-<div align="center">
-  <sub>Focusing on performance, design patterns, and conversion architecture.</sub>
-</div>
+
+**Built with precision engineering for the legal industry.**
