@@ -4,97 +4,104 @@
 
 @layer base {
   :root {
-    /* Advocacia Premium — Light Mode */
-    /* Navy Blue (Primary) */
-    --primary: 210 38% 12%;
-    /* #0F1E2E */
-    --primary-foreground: 36 33% 95%;
-    /* Cream #F7F3ED */
+    /* Advocacia Premium v2 — Light Mode */
+    /* Charcoal & Burgundy Theme */
 
-    /* Gold / Champagne (Accent) */
-    --accent: 38 38% 60%;
-    /* #C8A96A */
-    --accent-foreground: 210 38% 12%;
-    /* Navy */
+    /* Primary (Charcoal text) */
+    --primary: 0 0% 10%;
+    /* #1A1A1A */
+    --primary-foreground: 33 28% 93%;
+    /* Warm Ivory */
 
-    /* Background (Cream / Warm) */
-    --background: 36 33% 95%;
-    /* #F7F3ED */
-    --foreground: 210 38% 12%;
-    /* Navy */
+    /* Accent (Burgundy) */
+    --accent: 340 44% 20%;
+    /* #4A1C2B */
+    --accent-foreground: 33 28% 93%;
+
+    /* Background (Warm Ivory) */
+    --background: 33 28% 94%;
+    /* #F5F0EA */
+    --foreground: 0 0% 10%;
+    /* Charcoal */
 
     /* Named project tokens */
-    --cream: 36 33% 95%;
-    /* #F7F3ED */
-    --dark: 210 38% 12%;
-    /* #0F1E2E */
+    --cream: 33 28% 93%;
+    /* #EDE7DF */
+    --dark: 0 0% 10%;
+    /* #1A1A1A */
 
-    --card: 36 25% 97%;
-    --card-foreground: 210 38% 12%;
+    --card: 33 25% 96%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 36 33% 95%;
-    --popover-foreground: 210 38% 12%;
+    --popover: 33 28% 94%;
+    --popover-foreground: 0 0% 10%;
 
-    --secondary: 36 15% 90%;
-    --secondary-foreground: 210 38% 12%;
+    --secondary: 33 12% 89%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 36 15% 90%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 33 12% 89%;
+    --muted-foreground: 0 0% 42%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 36 15% 85%;
-    --input: 36 15% 85%;
-    --ring: 38 38% 60%;
+    --border: 33 12% 84%;
+    --input: 33 12% 84%;
+    --ring: 28 40% 59%;
 
-    --navy-dark: 210 38% 12%;
-    --navy-medium: 210 38% 20%;
-    --gold: 38 38% 60%;
-    --gold-light: 38 50% 70%;
+    --navy-dark: 0 0% 10%;
+    --navy-medium: 0 0% 20%;
+    --gold: 28 40% 59%;
+    /* #C4956A — Bronze/Copper */
+    --gold-light: 28 48% 68%;
 
     --radius: 1rem;
   }
 
   [data-theme="dark"] {
-    /* Advocacia Premium — Dark Mode */
-    --background: 213 56% 8%;
-    /* #0A1622 */
-    --foreground: 0 0% 90%;
-    /* #E6E6E6 */
+    /* Advocacia Premium v2 — Dark Mode */
+    /* Charcoal & Burgundy Theme */
 
-    --primary: 0 0% 93%;
-    /* Light text on dark bg */
-    --primary-foreground: 213 56% 8%;
+    --background: 0 0% 7%;
+    /* #121212 */
+    --foreground: 33 18% 86%;
+    /* #DED8D0 */
 
-    --accent: 40 45% 65%;
-    /* #D6B676 Gold */
-    --accent-foreground: 213 56% 8%;
+    --primary: 33 18% 90%;
+    /* Light warm text */
+    --primary-foreground: 0 0% 7%;
 
-    --cream: 0 0% 93%;
-    --dark: 220 26% 7%;
-    /* #111827 */
+    --accent: 348 38% 42%;
+    /* #943850 — Burgundy (lighter for dark bg) */
+    --accent-foreground: 0 0% 7%;
 
-    --card: 220 26% 10%;
-    --card-foreground: 0 0% 90%;
+    --cream: 33 18% 88%;
+    /* #E4DDD5 */
+    --dark: 0 0% 6%;
+    /* #0F0F0F */
 
-    --popover: 213 56% 8%;
-    --popover-foreground: 0 0% 90%;
+    --card: 0 0% 11%;
+    /* #1C1C1C */
+    --card-foreground: 33 18% 86%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 90%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 33 18% 86%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 33 18% 86%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 55%;
 
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 40 45% 65%;
+    --ring: 28 40% 59%;
 
-    --navy-dark: 213 56% 8%;
-    --navy-medium: 213 40% 14%;
-    --gold: 40 45% 65%;
-    --gold-light: 40 55% 75%;
+    --navy-dark: 0 0% 7%;
+    --navy-medium: 0 0% 14%;
+    --gold: 28 40% 59%;
+    /* #C4956A — Bronze/Copper */
+    --gold-light: 28 48% 68%;
   }
 }
 

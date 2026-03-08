@@ -55,7 +55,7 @@ const practiceAreas = [
 
 const PracticeAreaCard = ({ title, slug, description, icon, image }: { title: string; slug: string; description: string; icon: React.ReactNode; image: string }) => {
     return (
-        <Link to={`/atuacao/${slug}`} className="practice-card relative h-[380px] w-full rounded-[2rem] overflow-hidden bg-dark/20 shadow-xl group cursor-pointer border border-border/10 isolate block">
+        <Link to={`/atuacao/${slug}`} className="practice-card relative h-[380px] w-full rounded-lg overflow-hidden bg-dark/20 shadow-xl group cursor-pointer border border-border/10 isolate block">
             <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] md:group-hover:scale-110"
                 style={{ backgroundImage: `url(${image})` }}
@@ -65,16 +65,16 @@ const PracticeAreaCard = ({ title, slug, description, icon, image }: { title: st
             <div className="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/50 to-transparent opacity-90" />
 
             <div className="absolute inset-0 p-8 flex flex-col justify-end text-cream translate-y-4 group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
-                <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center text-gold mb-4 border border-gold/30">
+                <div className="text-gold/60 mb-4">
                     {icon}
                 </div>
-                <h3 className="font-sans font-bold text-2xl mb-2 text-white drop-shadow-md">{title}</h3>
-                <p className="font-sans text-white/80 text-sm mb-4 drop-shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100 leading-relaxed">
+                <h3 className="font-sans font-bold text-xl mb-2 text-white uppercase tracking-wide">{title}</h3>
+                <p className="font-sans text-white/70 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100 leading-relaxed">
                     {description}
                 </p>
-                <span className="flex items-center gap-2 text-gold font-sans font-bold text-sm uppercase tracking-wider relative overflow-hidden group/btn w-fit">
+                <span className="flex items-center gap-2 text-gold font-sans font-bold text-xs uppercase tracking-[0.2em] relative overflow-hidden group/btn w-fit">
                     <span>Saiba Mais</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover/btn:translate-x-1 transition-transform"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover/btn:translate-x-1 transition-transform"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                     <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gold -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-300" />
                 </span>
             </div>

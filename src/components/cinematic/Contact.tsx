@@ -56,7 +56,7 @@ export const Contact = () => {
     return (
         <section id="contato" ref={containerRef} className="py-10 lg:py-16 px-8 md:px-16 w-full max-w-7xl mx-auto">
 
-            <div className="bg-card text-card-foreground rounded-[3rem] p-6 md:p-10 lg:p-12 relative overflow-hidden shadow-2xl border border-border/50">
+            <div className="bg-card text-card-foreground p-6 md:p-10 lg:p-16 relative overflow-hidden border-t border-border/30">
                 {/* Pattern */}
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 
@@ -75,8 +75,8 @@ export const Contact = () => {
 
                         {/* Contact Info Cards */}
                         <div className="contact-anim flex flex-col gap-4">
-                            <div className="flex items-center gap-4 p-4 rounded-2xl bg-background/50 border border-border/30">
-                                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0">
+                            <div className="flex items-center gap-4 p-4 rounded-md bg-background/50 border border-border/20">
+                                <div className="w-8 h-8 flex items-center justify-center text-gold shrink-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
                                 </div>
                                 <div>
@@ -84,8 +84,8 @@ export const Contact = () => {
                                     <div className="font-sans text-sm text-foreground/60">Av. Paulista, 1578 — Sala 1201, São Paulo - SP</div>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-4 p-4 rounded-2xl bg-background/50 border border-border/30">
-                                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0">
+                            <div className="flex items-center gap-4 p-4 rounded-md bg-background/50 border border-border/20">
+                                <div className="w-8 h-8 flex items-center justify-center text-gold shrink-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
                                 </div>
                                 <div>
@@ -93,8 +93,8 @@ export const Contact = () => {
                                     <div className="font-sans text-sm text-foreground/60">(11) 99999-9999</div>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-4 p-4 rounded-2xl bg-background/50 border border-border/30">
-                                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0">
+                            <div className="flex items-center gap-4 p-4 rounded-md bg-background/50 border border-border/20">
+                                <div className="w-8 h-8 flex items-center justify-center text-gold shrink-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
                                 </div>
                                 <div>
@@ -105,7 +105,7 @@ export const Contact = () => {
                         </div>
 
                         {/* Map */}
-                        <div className="contact-anim w-full h-[200px] lg:h-[250px] rounded-2xl overflow-hidden shadow-lg border border-border/10 relative">
+                        <div className="contact-anim w-full h-[200px] lg:h-[250px] rounded-md overflow-hidden border border-border/10 relative">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117036.78440029519!2d-46.47161821434969!3d-23.551821896792612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66fee7ce4bc3%3A0xe138bb92fa68ec2e!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20State%20of%20S%C3%A3o%20Paulo!5e0!3m2!1sen!2sbr!4v1715015383562!5m2!1sen!2sbr"
                                 width="100%"
@@ -120,7 +120,7 @@ export const Contact = () => {
 
                     {/* Form */}
                     <div className="lg:w-1/2 flex items-center justify-center lg:justify-end">
-                        <div className="contact-anim bg-background text-foreground rounded-[2rem] p-6 lg:p-8 w-full max-w-md shadow-xl flex flex-col gap-6 shadow-black/10">
+                        <div className="contact-anim bg-background text-foreground rounded-lg p-6 lg:p-8 w-full max-w-md border border-border/20 flex flex-col gap-6">
                             <div className="text-center">
                                 <h3 className="font-display font-bold text-2xl mb-2">Agende uma Reunião</h3>
                                 <p className="font-sans text-sm text-foreground/70">
@@ -143,22 +143,22 @@ export const Contact = () => {
                                 >
                                     <div className="flex flex-col gap-1.5">
                                         <label htmlFor="nome" className="text-xs tracking-wider uppercase font-semibold text-foreground/60 pl-1">Seu Nome</label>
-                                        <input required type="text" id="nome" name="nome" placeholder="Nome completo" className="w-full bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all text-foreground" />
+                                        <input required type="text" id="nome" name="nome" placeholder="Nome completo" className="w-full bg-foreground/5 border border-foreground/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all text-foreground" />
                                     </div>
 
                                     <div className="flex flex-col gap-1.5">
                                         <label htmlFor="email" className="text-xs tracking-wider uppercase font-semibold text-foreground/60 pl-1">Email</label>
-                                        <input required type="email" id="email" name="email" placeholder="seu@email.com" className="w-full bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all text-foreground" />
+                                        <input required type="email" id="email" name="email" placeholder="seu@email.com" className="w-full bg-foreground/5 border border-foreground/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all text-foreground" />
                                     </div>
 
                                     <div className="flex flex-col gap-1.5">
                                         <label htmlFor="telefone" className="text-xs tracking-wider uppercase font-semibold text-foreground/60 pl-1">Telefone / WhatsApp</label>
-                                        <input required type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" className="w-full bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all text-foreground" />
+                                        <input required type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" className="w-full bg-foreground/5 border border-foreground/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all text-foreground" />
                                     </div>
 
                                     <div className="flex flex-col gap-1.5">
                                         <label htmlFor="area" className="text-xs tracking-wider uppercase font-semibold text-foreground/60 pl-1">Área de Interesse</label>
-                                        <select required id="area" name="area" defaultValue="" className="w-full bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all appearance-none text-foreground">
+                                        <select required id="area" name="area" defaultValue="" className="w-full bg-foreground/5 border border-foreground/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all appearance-none text-foreground">
                                             <option value="" disabled>Selecione uma área</option>
                                             <option value="Direito Empresarial">Direito Empresarial</option>
                                             <option value="Direito Civil">Direito Civil</option>
@@ -171,13 +171,13 @@ export const Contact = () => {
 
                                     <div className="flex flex-col gap-1.5 mb-2">
                                         <label htmlFor="mensagem" className="text-xs tracking-wider uppercase font-semibold text-foreground/60 pl-1">Mensagem (opcional)</label>
-                                        <textarea id="mensagem" name="mensagem" placeholder="Descreva brevemente sua situação..." rows={3} className="w-full bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all text-foreground resize-none" />
+                                        <textarea id="mensagem" name="mensagem" placeholder="Descreva brevemente sua situação..." rows={3} className="w-full bg-foreground/5 border border-foreground/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-all text-foreground resize-none" />
                                     </div>
 
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="flex items-center justify-center gap-3 w-full bg-gold text-dark py-4 rounded-xl font-sans font-bold text-lg hover:-translate-y-1 transition-all shadow-lg shadow-gold/20 mt-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                                        className="flex items-center justify-center gap-3 w-full bg-gold text-dark py-4 font-sans font-bold text-sm uppercase tracking-widest hover:bg-gold/90 transition-all mt-2 disabled:opacity-70 disabled:cursor-not-allowed"
                                     >
                                         {isSubmitting ? (
                                             <>

@@ -83,7 +83,7 @@ export const BlogPreview = () => {
                     <Link
                         key={index}
                         to={`/blog/${post.slug}`}
-                        className="blog-card group bg-card rounded-[2rem] overflow-hidden border border-border/30 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 block"
+                        className="blog-card group bg-card rounded-lg overflow-hidden border border-border/20 hover:border-gold/20 transition-all duration-500 block"
                     >
                         {/* Image */}
                         <div className="relative h-52 overflow-hidden">
@@ -94,7 +94,7 @@ export const BlogPreview = () => {
                             <div className="absolute inset-0 bg-dark/30 group-hover:bg-dark/10 transition-colors duration-500" />
 
                             {/* Category badge */}
-                            <div className="absolute top-4 left-4 bg-gold/90 text-dark text-xs font-sans font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+                            <div className="absolute top-4 left-4 bg-gold/90 text-dark text-[10px] font-sans font-bold px-3 py-1 uppercase tracking-wider backdrop-blur-sm">
                                 {post.category}
                             </div>
                         </div>
@@ -108,7 +108,7 @@ export const BlogPreview = () => {
                             <p className="font-sans text-sm text-primary/70 leading-relaxed">
                                 {post.summary}
                             </p>
-                            <span className="flex items-center gap-2 text-gold font-sans font-bold text-sm uppercase tracking-wider mt-2 w-fit group/btn">
+                            <span className="flex items-center gap-2 text-gold font-sans font-bold text-xs uppercase tracking-[0.2em] mt-2 w-fit group/btn">
                                 <span>Ler Artigo</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover/btn:translate-x-1 transition-transform"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                             </span>

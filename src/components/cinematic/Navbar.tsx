@@ -65,10 +65,10 @@ const Navbar = () => {
     <>
       <nav
         ref={navRef}
-        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-[3rem] px-5 md:px-8 py-3 md:py-4 flex items-center justify-between gap-4 md:gap-12 w-[95%] max-w-5xl
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 md:px-12 lg:px-16 py-4 flex items-center justify-between w-full
           ${isScrolled
-            ? 'bg-dark/95 backdrop-blur-xl border border-gold/10 shadow-lg text-cream'
-            : 'bg-transparent text-white'
+            ? 'bg-dark/90 backdrop-blur-xl border-b border-white/5 shadow-lg'
+            : 'bg-transparent'
           }
         `}
       >
@@ -77,16 +77,16 @@ const Navbar = () => {
           className="font-display font-bold text-xl tracking-tight drop-shadow-sm cursor-pointer"
           onClick={() => handleNavClick('inicio')}
         >
-          <span className="text-gold">Advocacia</span> Premium
+          <span className="text-gold">Advocacia</span> <span className="text-cream">Premium</span>
         </div>
 
         {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-x-6 lg:gap-x-8 font-sans text-sm lg:text-base font-medium">
+        <ul className="hidden md:flex items-center gap-x-8 lg:gap-x-10 font-sans text-[13px] lg:text-sm font-medium uppercase tracking-wider">
           {navLinks.map((item) => (
             <li key={item.id}>
               <button
                 onClick={() => handleNavClick(item.id)}
-                className="cursor-pointer hover:text-gold font-semibold whitespace-nowrap transition-colors hover:-translate-y-[1px] transform drop-shadow-sm"
+                className="cursor-pointer text-cream/70 hover:text-gold font-medium whitespace-nowrap transition-colors duration-300"
               >
                 {item.label}
               </button>
@@ -95,15 +95,17 @@ const Navbar = () => {
         </ul>
 
         {/* CTA Desktop */}
-        <button
-          onClick={() => handleNavClick('contato')}
-          className="hidden md:flex group relative overflow-hidden bg-gradient-to-r from-gold/90 to-gold text-dark px-6 py-2.5 rounded-[2rem] font-sans text-sm font-bold hover:scale-105 transition-transform duration-300 flex-shrink-0 shadow-[0_0_15px_hsl(var(--gold)/0.3)]"
-        >
-          <span className="relative z-10 flex items-center gap-2 whitespace-nowrap drop-shadow-sm">
-            Agendar Consulta
-          </span>
-          <div className="absolute inset-0 bg-dark/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-        </button>
+        <div className="hidden md:flex items-center gap-6">
+          <div className="w-px h-6 bg-white/10" />
+          <button
+            onClick={() => handleNavClick('contato')}
+            className="group relative overflow-hidden bg-transparent text-gold px-6 py-2.5 border border-gold/40 font-sans text-xs font-bold uppercase tracking-widest hover:bg-gold hover:text-dark transition-all duration-300 flex-shrink-0"
+          >
+            <span className="relative z-10 flex items-center gap-2 whitespace-nowrap">
+              Agendar Consulta
+            </span>
+          </button>
+        </div>
 
         {/* Mobile hamburger */}
         <button
@@ -111,9 +113,9 @@ const Navbar = () => {
           className="md:hidden flex flex-col gap-1.5 p-2"
           aria-label="Menu"
         >
-          <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ${isMobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ${isMobileOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ${isMobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-cream transition-all duration-300 ${isMobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-cream transition-all duration-300 ${isMobileOpen ? 'opacity-0' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-cream transition-all duration-300 ${isMobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </nav>
 
