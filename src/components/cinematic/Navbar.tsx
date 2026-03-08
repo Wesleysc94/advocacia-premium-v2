@@ -8,11 +8,11 @@ gsap.registerPlugin(ScrollTrigger);
 const Navbar = () => {
   const navRef = useRef<HTMLElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Scroll restoration for cross-page anchor links
     if (location.hash) {
       setTimeout(() => {
         const id = location.hash.replace('#', '');
@@ -36,6 +36,7 @@ const Navbar = () => {
   }, []);
 
   const handleNavClick = (id: string) => {
+    setIsMobileOpen(false);
     if (id === 'inicio') {
       navigate('/');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -52,51 +53,91 @@ const Navbar = () => {
     }
   };
 
-  return (
-    <nav
-      ref={navRef}
-      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-[3rem] px-5 md:px-8 py-3 md:py-4 flex items-center justify-between gap-4 md:gap-12 w-[95%] max-w-5xl
-        ${isScrolled
-          ? 'bg-primary/95 backdrop-blur-xl border border-primary-foreground/10 shadow-lg text-primary-foreground'
-          : 'bg-transparent text-white'
-        }
-      `}
-    >
-      <div className="font-sans-bold font-bold text-xl tracking-tight drop-shadow-sm">
-        Aura Odonto Premium
-      </div>
+  const navLinks = [
+    { label: 'Início', id: 'inicio' },
+    { label: 'O Escritório', id: 'sobre' },
+    { label: 'Atuação', id: 'atuacao' },
+    { label: 'Blog', id: 'blog' },
+    { label: 'Contato', id: 'contato' },
+  ];
 
-      <ul className="hidden md:flex flex-wrap lg:flex-nowrap items-center justify-center gap-x-4 lg:gap-x-8 gap-y-2 font-sans-outfit text-sm lg:text-base font-medium">
-        {[
-          { label: 'Início', id: 'inicio' },
-          { label: 'A Clínica', id: 'sobre' },
-          { label: 'Equipe', id: 'equipe' },
-          { label: 'Avaliações', id: 'avaliacoes' },
-          { label: 'Tratamentos', id: 'tratamentos' },
-          { label: 'Localização', id: 'contato' }
-        ].map((item) => (
-          <li key={item.id}>
+  return (
+    <>
+      <nav
+        ref={navRef}
+        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-[3rem] px-5 md:px-8 py-3 md:py-4 flex items-center justify-between gap-4 md:gap-12 w-[95%] max-w-5xl
+          ${isScrolled
+            ? 'bg-dark/95 backdrop-blur-xl border border-gold/10 shadow-lg text-cream'
+            : 'bg-transparent text-white'
+          }
+        `}
+      >
+        {/* Brand */}
+        <div
+          className="font-display font-bold text-xl tracking-tight drop-shadow-sm cursor-pointer"
+          onClick={() => handleNavClick('inicio')}
+        >
+          <span className="text-gold">Advocacia</span> Premium
+        </div>
+
+        {/* Desktop links */}
+        <ul className="hidden md:flex items-center gap-x-6 lg:gap-x-8 font-sans text-sm lg:text-base font-medium">
+          {navLinks.map((item) => (
+            <li key={item.id}>
+              <button
+                onClick={() => handleNavClick(item.id)}
+                className="cursor-pointer hover:text-gold font-semibold whitespace-nowrap transition-colors hover:-translate-y-[1px] transform drop-shadow-sm"
+              >
+                {item.label}
+              </button>
+            </li>
+          ))}
+        </ul>
+
+        {/* CTA Desktop */}
+        <button
+          onClick={() => handleNavClick('contato')}
+          className="hidden md:flex group relative overflow-hidden bg-gradient-to-r from-gold/90 to-gold text-dark px-6 py-2.5 rounded-[2rem] font-sans text-sm font-bold hover:scale-105 transition-transform duration-300 flex-shrink-0 shadow-[0_0_15px_hsl(var(--gold)/0.3)]"
+        >
+          <span className="relative z-10 flex items-center gap-2 whitespace-nowrap drop-shadow-sm">
+            Agendar Consulta
+          </span>
+          <div className="absolute inset-0 bg-dark/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+        </button>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setIsMobileOpen(!isMobileOpen)}
+          className="md:hidden flex flex-col gap-1.5 p-2"
+          aria-label="Menu"
+        >
+          <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ${isMobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ${isMobileOpen ? 'opacity-0' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ${isMobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+        </button>
+      </nav>
+
+      {/* Mobile menu */}
+      {isMobileOpen && (
+        <div className="fixed inset-0 z-40 bg-dark/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8 md:hidden">
+          {navLinks.map((item) => (
             <button
+              key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className="cursor-pointer hover:text-accent font-semibold whitespace-nowrap transition-colors hover:-translate-y-[1px] transform drop-shadow-sm"
+              className="font-display text-3xl text-cream hover:text-gold transition-colors"
             >
               {item.label}
             </button>
-          </li>
-        ))}
-      </ul>
-
-      <button
-        onClick={() => handleNavClick('contato')}
-        className="group relative overflow-hidden bg-gradient-to-r from-accent/90 to-accent text-accent-foreground px-6 py-2.5 rounded-[2rem] font-sans-outfit text-sm font-bold hover:scale-105 transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] flex-shrink-0 shadow-[0_0_15px_hsl(var(--accent)/0.4)] hover:shadow-[0_0_20px_hsl(var(--accent)/0.6)]"
-      >
-        <span className="relative z-10 flex items-center gap-2 whitespace-nowrap drop-shadow-sm">
-          <span className="hidden sm:inline">Agendar Avaliação</span>
-          <span className="sm:hidden">Agendar</span>
-        </span>
-        <div className="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" />
-      </button>
-    </nav>
+          ))}
+          <button
+            onClick={() => handleNavClick('contato')}
+            className="mt-4 bg-gold text-dark px-8 py-3 rounded-full font-sans font-bold text-lg"
+          >
+            Agendar Consulta
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 

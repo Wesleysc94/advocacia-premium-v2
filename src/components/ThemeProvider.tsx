@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-type Theme = 'clinic' | 'luxury';
+type Theme = 'light' | 'dark';
 
 interface ThemeProviderProps {
     children: React.ReactNode;
@@ -13,7 +13,7 @@ interface ThemeProviderState {
 }
 
 const initialState: ThemeProviderState = {
-    theme: 'clinic',
+    theme: 'light',
     setTheme: () => null,
 };
 
@@ -21,18 +21,18 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
 export function ThemeProvider({
     children,
-    defaultTheme = 'clinic',
+    defaultTheme = 'light',
     ...props
 }: ThemeProviderProps) {
     const [theme, setTheme] = useState<Theme>(
-        () => (localStorage.getItem('Aura-theme') as Theme) || defaultTheme
+        () => (localStorage.getItem('advocacia-theme') as Theme) || defaultTheme
     );
 
     useEffect(() => {
         const root = window.document.documentElement;
 
-        if (theme === 'luxury') {
-            root.setAttribute('data-theme', 'luxury');
+        if (theme === 'dark') {
+            root.setAttribute('data-theme', 'dark');
         } else {
             root.removeAttribute('data-theme');
         }
@@ -41,7 +41,7 @@ export function ThemeProvider({
     const value = {
         theme,
         setTheme: (theme: Theme) => {
-            localStorage.setItem('Aura-theme', theme);
+            localStorage.setItem('advocacia-theme', theme);
             setTheme(theme);
         },
     };

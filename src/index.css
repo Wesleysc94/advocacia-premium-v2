@@ -4,97 +4,97 @@
 
 @layer base {
   :root {
-    /* Preset C - Clinical Premium (Odontologia) */
-    /* Navy Blue Escuro (Primary - Autoridade e Confiança Médica) */
-    --primary: 222 47% 11%;
-    /* #0F172A */
-    --primary-foreground: 210 40% 98%;
-    /* Branco Neve */
+    /* Advocacia Premium — Light Mode */
+    /* Navy Blue (Primary) */
+    --primary: 210 38% 12%;
+    /* #0F1E2E */
+    --primary-foreground: 36 33% 95%;
+    /* Cream #F7F3ED */
 
-    /* Dental Cyan / Soft Teal (Accent - Saúde, Limpeza, Modernidade) */
-    --accent: 189 94% 43%;
-    /* #06B6D4 */
-    --accent-foreground: 222 47% 11%;
+    /* Gold / Champagne (Accent) */
+    --accent: 38 38% 60%;
+    /* #C8A96A */
+    --accent-foreground: 210 38% 12%;
     /* Navy */
 
-    /* Background (Branco Neve / Clean) */
-    --background: 0 0% 100%;
-    /* #FFFFFF */
-    --foreground: 222 47% 11%;
-    /* Texto Navy */
-
-    /* Cores Nomeadas Específicas do Projeto */
-    --cream: 210 40% 98%;
-    /* Substituindo a cor creme por Branco Frio */
-    --dark: 222 47% 11%;
+    /* Background (Cream / Warm) */
+    --background: 36 33% 95%;
+    /* #F7F3ED */
+    --foreground: 210 38% 12%;
     /* Navy */
 
-    /* Outros tokens shadcn que podem ser usados */
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    /* Named project tokens */
+    --cream: 36 33% 95%;
+    /* #F7F3ED */
+    --dark: 210 38% 12%;
+    /* #0F1E2E */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --card: 36 25% 97%;
+    --card-foreground: 210 38% 12%;
 
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 222 47% 11%;
+    --popover: 36 33% 95%;
+    --popover-foreground: 210 38% 12%;
 
-    --muted: 214 32% 91%;
-    /* Slate 200 */
-    --muted-foreground: 215 16% 47%;
-    /* Slate 500 */
+    --secondary: 36 15% 90%;
+    --secondary-foreground: 210 38% 12%;
+
+    --muted: 36 15% 90%;
+    --muted-foreground: 0 0% 45%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 189 94% 43%;
+    --border: 36 15% 85%;
+    --input: 36 15% 85%;
+    --ring: 38 38% 60%;
 
-    --radius: 2rem;
+    --navy-dark: 210 38% 12%;
+    --navy-medium: 210 38% 20%;
+    --gold: 38 38% 60%;
+    --gold-light: 38 50% 70%;
+
+    --radius: 1rem;
   }
 
-  [data-theme="luxury"] {
-    /* Fundo Global (Grafite Profundo) */
-    --background: 240 10% 6%;
-    /* Fundo geral claro -> Grafite */
-    --foreground: 0 0% 98%;
-    /* Texto geral -> Off-white */
+  [data-theme="dark"] {
+    /* Advocacia Premium — Dark Mode */
+    --background: 213 56% 8%;
+    /* #0A1622 */
+    --foreground: 0 0% 90%;
+    /* #E6E6E6 */
 
-    /* Primary (Usado para os Textos Principais e Títulos em text-primary) */
-    /* No fundo escuro, o text-primary precisa ser CLARO */
-    --primary: 0 0% 98%;
-    /* Off-white puro */
-    --primary-foreground: 240 10% 6%;
-    /* Texto escuro dentro do bg-primary cheio */
+    --primary: 0 0% 93%;
+    /* Light text on dark bg */
+    --primary-foreground: 213 56% 8%;
 
-    /* Destaques (Dourado Metálico) */
-    --accent: 45 93% 47%;
-    /* #FBBF24 Dourado */
-    --accent-foreground: 240 10% 6%;
+    --accent: 40 45% 65%;
+    /* #D6B676 Gold */
+    --accent-foreground: 213 56% 8%;
 
-    --cream: 0 0% 96%;
-    /* Off-white macio */
-    --dark: 240 10% 4%;
-    /* Quase preto absoluto (Usado no Hero/Footer) */
+    --cream: 0 0% 93%;
+    --dark: 220 26% 7%;
+    /* #111827 */
 
-    --card: 240 10% 8%;
-    /* Pouco mais claro para separar do dark */
-    --card-foreground: 0 0% 98%;
+    --card: 220 26% 10%;
+    --card-foreground: 0 0% 90%;
 
-    --popover: 240 10% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 213 56% 8%;
+    --popover-foreground: 0 0% 90%;
 
     --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 90%;
 
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 45 93% 47%;
-    /* Dourado */
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 40 45% 65%;
+
+    --navy-dark: 213 56% 8%;
+    --navy-medium: 213 40% 14%;
+    --gold: 40 45% 65%;
+    --gold-light: 40 55% 75%;
   }
 }
 
@@ -105,8 +105,8 @@
 
   html,
   body {
-    @apply bg-dark text-foreground antialiased selection:bg-accent selection:text-white;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    @apply bg-background text-foreground antialiased selection:bg-accent selection:text-white;
+    font-family: 'Inter', sans-serif;
   }
 
   h1,
@@ -115,41 +115,41 @@
   h4,
   h5,
   h6 {
-    @apply tracking-tighter;
+    font-family: 'Playfair Display', serif;
+    @apply tracking-tight;
   }
 }
 
 @layer utilities {
   .font-sans-bold {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
   }
 
   .font-sans-outfit {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   .font-serif-drama {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-style: italic;
   }
 
   .font-mono-data {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
   }
 
-  /* Noise Overlay Class */
   .noise-overlay {
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 9999;
-    opacity: 0.05;
+    opacity: 0.03;
     mix-blend-mode: multiply;
   }
 }
 
-/* Base resets & globals for smooth interactions */
 html {
   scroll-behavior: smooth;
 }
@@ -158,9 +158,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Hide scrollbar for cleaner look (optional but good for cinematic) */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -168,10 +167,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary) / 0.3);
+  background: hsl(var(--gold) / 0.3);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary) / 0.6);
+  background: hsl(var(--gold) / 0.6);
 }

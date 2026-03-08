@@ -3,10 +3,12 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import IndexCinematic from "./pages/IndexCinematic";
+import PracticeAreaPage from "./pages/PracticeAreaPage";
+import BlogArticlePage from "./pages/BlogArticlePage";
+import LegalPage from "./pages/LegalPage";
 import NotFound from "./pages/NotFound";
-import TreatmentDetails from "./pages/TreatmentDetails";
 import FloatingWhatsApp from "./components/cinematic/FloatingWhatsApp";
 import { useEffect } from "react";
 
@@ -38,8 +40,20 @@ const AnimatedRoutes = () => {
           element={<PageTransition><IndexCinematic /></PageTransition>}
         />
         <Route
-          path="/tratamentos/:id"
-          element={<PageTransition><TreatmentDetails /></PageTransition>}
+          path="/atuacao/:slug"
+          element={<PageTransition><PracticeAreaPage /></PageTransition>}
+        />
+        <Route
+          path="/blog/:slug"
+          element={<PageTransition><BlogArticlePage /></PageTransition>}
+        />
+        <Route
+          path="/privacidade"
+          element={<PageTransition><LegalPage /></PageTransition>}
+        />
+        <Route
+          path="/termos"
+          element={<PageTransition><LegalPage /></PageTransition>}
         />
         <Route
           path="*"
@@ -51,7 +65,7 @@ const AnimatedRoutes = () => {
 };
 
 const App = () => (
-  <ThemeProvider defaultTheme="clinic">
+  <ThemeProvider defaultTheme="dark">
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />

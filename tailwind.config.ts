@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         display: ['"Playfair Display"', 'serif'],
-        sans: ['"DM Sans"', 'sans-serif'],
+        sans: ['"Inter"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -53,8 +53,8 @@ export default {
         },
         gold: "hsl(var(--gold))",
         "gold-light": "hsl(var(--gold-light))",
-        "green-dark": "hsl(var(--green-dark))",
-        "green-medium": "hsl(var(--green-medium))",
+        "navy-dark": "hsl(var(--navy-dark))",
+        "navy-medium": "hsl(var(--navy-medium))",
         cream: "hsl(var(--cream))",
         dark: "hsl(var(--dark))",
         sidebar: {

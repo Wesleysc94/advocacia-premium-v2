@@ -1,33 +1,29 @@
 import React from 'react';
 import Navbar from '@/components/cinematic/Navbar';
 import Hero from '@/components/cinematic/Hero';
-import Reviews from '@/components/cinematic/Reviews';
-import Treatments from '@/components/cinematic/Treatments';
-import Features from '@/components/cinematic/Features';
-import BeforeAfterGallery from '@/components/cinematic/BeforeAfterGallery';
-import Team from '@/components/cinematic/Team';
-import Faq from '@/components/cinematic/Faq';
 import About from '@/components/cinematic/About';
+import { PracticeAreas } from '@/components/cinematic/Treatments';
+import Features from '@/components/cinematic/Features';
+import { BlogPreview } from '@/components/cinematic/BlogPreview';
+import Reviews from '@/components/cinematic/Reviews';
 import Contact from '@/components/cinematic/Contact';
 import Footer from '@/components/cinematic/Footer';
 
 const IndexCinematic = () => {
     return (
-        <div className="bg-background text-foreground min-h-screen font-sans antialiased selection:bg-accent selection:text-accent-foreground select-none">
+        <div className="bg-background text-foreground min-h-screen font-sans antialiased selection:bg-gold selection:text-dark select-none">
             <Navbar />
             <main>
                 <div id="inicio">
                     <Hero />
                 </div>
-                <Treatments />
-                <div id="especialidades">
-                    <Features />
-                </div>
-                <BeforeAfterGallery />
-                <Reviews />
-                <Team />
-                <Faq />
                 <About />
+                <div id="especialidades">
+                    <PracticeAreas />
+                </div>
+                <Features />
+                <BlogPreview />
+                <Reviews />
                 <Contact />
             </main>
             <Footer />
