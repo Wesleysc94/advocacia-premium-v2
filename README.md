@@ -1,72 +1,117 @@
-# Advocacia Premium — v2 Charcoal Edition
+# Advocacia Premium - Premium Legal Website
 
-> Premium law firm website template built with React, TypeScript, Vite, and TailwindCSS.
+`PT-BR`
 
-![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-06B6D4?logo=tailwindcss&logoColor=white)
+Website premium para escritórios de advocacia, criado para transmitir autoridade, discrição e sofisticação institucional. Este projeto integra a `Colecao Premium Atual` e funciona como base forte para marcas jurídicas com posicionamento elevado.
 
-## 🖤 Design System — Charcoal & Burgundy
+`EN`
 
-| Token | Dark Mode | Light Mode |
-|-------|-----------|------------|
-| Background | Charcoal `#121212` | Warm Ivory `#F5F0EA` |
-| Accent | Bronze `#C4956A` | Burgundy `#4A1C2B` |
-| Text | Ivory `#DED8D0` | Charcoal `#1A1A1A` |
-| Cards | Dark Gray `#1C1C1C` | Light Ivory `#FAF5F0` |
+Premium website for law firms, created to communicate authority, discretion, and institutional sophistication. This project is part of the `Colecao Premium Atual` and works as a strong base for legal brands with an elevated positioning.
 
-## ⚡ Features
+## Positioning / Posicionamento
 
-- **11 pages** — Home, 5 Practice Areas, 3 Blog Articles, Privacy Policy, Terms
-- **Editorial layout** — Numbered sections (01–04), angular geometry, full-width navbar
-- **Dark/Light mode** — Automatic toggle with smooth transitions
-- **SEO optimized** — JSON-LD LegalService schema, robots.txt, sitemap.xml (11 URLs)
-- **LGPD compliant** — Privacy Policy & Terms of Use pages
-- **Premium form** — Phone field, loading spinner, success toast, area selector
-- **GSAP animations** — Scroll-triggered reveals, staggered card entries
-- **Responsive** — Tested on mobile, tablet, and desktop
+`PT-BR`
 
-## 🏗️ Tech Stack
+O projeto une linguagem editorial, estrutura jurídica clara e percepção visual premium. É uma base pensada para áreas consultivas, escritórios boutique e operações jurídicas que precisam transmitir confiança logo no primeiro contato.
 
-| Tool | Purpose |
-|------|---------|
-| React 18 | UI framework (SPA) |
-| TypeScript 5 | Type-safe development |
-| Vite 5 | Build tool + HMR |
-| TailwindCSS 3 | Utility-first styling |
-| GSAP + ScrollTrigger | Smooth scroll animations |
-| React Router 6 | Client-side routing |
-| Sonner | Toast notifications |
-| Vercel | Deployment (CDN, edge) |
+`EN`
 
-## 🚀 Quick Start
+The project combines editorial language, clear legal structure, and premium visual perception. It is designed for consultive practices, boutique firms, and legal operations that need to communicate trust from the first interaction.
+
+## What Is Here / O Que Existe Aqui
+
+`PT-BR`
+
+- experiência principal do projeto;
+- stack real utilizada;
+- blueprint lite;
+- base institucional para nicho jurídico;
+- estrutura pronta para personalização comercial.
+
+`EN`
+
+- main project experience;
+- real stack used in production;
+- lite blueprint;
+- institutional base for the legal niche;
+- structure ready for commercial customization.
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- GSAP
+- React Router
+
+## Key Highlights / Principais Diferenciais
+
+`PT-BR`
+
+- linguagem visual sóbria com peso institucional;
+- páginas de áreas de atuação e conteúdo jurídico;
+- base preparada para SEO, privacidade e conversão consultiva;
+- equilíbrio entre autoridade, clareza e apresentação premium;
+- fácil adaptação para diferentes especialidades jurídicas.
+
+`EN`
+
+- restrained visual language with institutional weight;
+- practice area and legal content pages;
+- base prepared for SEO, privacy, and consultive conversion;
+- balance between authority, clarity, and premium presentation;
+- easy to adapt for different legal specialties.
+
+## Ideal For / Indicado Para
+
+`PT-BR`
+
+- escritórios boutique;
+- advocacia empresarial;
+- direito imobiliário, tributário, cível ou consultivo;
+- agências que atendem o setor jurídico.
+
+`EN`
+
+- boutique firms;
+- corporate law practices;
+- real estate, tax, civil, or consultive law;
+- agencies serving the legal sector.
+
+## Blueprint / Blueprint
+
+- Lite blueprint: [BLUEPRINT-LITE.md](./BLUEPRINT-LITE.md)
+
+## Local Setup / Como Rodar
 
 ```bash
-# Install dependencies
 npm install
-
-# Start dev server (http://localhost:8080)
 npm run dev
-
-# Build for production
 npm run build
 ```
 
-## 📁 Project Structure
+## License / Licenca
 
-```
-src/
-├── components/cinematic/   # UI components (Navbar, Hero, Features, etc.)
-├── pages/                  # Route pages (legal, blog, practice areas)
-├── index.css               # Design tokens (CSS custom properties)
-└── App.tsx                 # Router configuration
-```
+`PT-BR`
 
-## 📄 License
+Este repositório existe para showcase, referência e avaliação da experiência. Uso comercial, redistribuição e empacotamento devem seguir a licença incluída neste projeto.
 
-Custom-built template. All rights reserved.
+`EN`
 
----
+This repository exists for showcase, reference, and evaluation of the experience. Commercial usage, redistribution, and repackaging must follow the license included in this project.
 
-**Built with precision engineering for the legal industry.**
+## Consultive Path / Caminho Consultivo
+
+`PT-BR`
+
+Se você quiser adaptar esta base para outro escritório, especialidade ou operação institucional, o caminho natural é a `Colecao Premium Atual` ou um contato direto com a `WX Digital Studio`.
+
+`EN`
+
+If you want to adapt this base for another firm, specialty, or institutional operation, the natural path is the `Colecao Premium Atual` or a direct conversation with `WX Digital Studio`.
+
+## Credits
+
+Created by [WX Digital Studio](https://wxdigitalstudio.com.br)  
+Powered by `Elite Dev Club | Standard Professional`
