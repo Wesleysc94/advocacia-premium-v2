@@ -8,6 +8,16 @@ Website premium para escritórios de advocacia, criado para transmitir autoridad
 
 Premium website for law firms, created to communicate authority, discretion, and institutional sophistication. This project is part of the `Colecao Premium Atual` and works as a strong base for legal brands with an elevated positioning.
 
+## Live Demo / Ver Projeto
+
+`PT-BR`
+
+Veja a experiencia publicada: [advocacia-premium-v2.vercel.app](https://advocacia-premium-v2.vercel.app/)
+
+`EN`
+
+Explore the live experience: [advocacia-premium-v2.vercel.app](https://advocacia-premium-v2.vercel.app/)
+
 ## Positioning / Posicionamento
 
 `PT-BR`
